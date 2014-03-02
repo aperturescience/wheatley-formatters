@@ -32,7 +32,7 @@ exports.frequency = function (megahertz, abbr) {
   var frequencies = ['MHz', 'GHz', 'THz', 'PHz'];
 
   if (!abbr) frequencies = [
-      'megahertz', 'gigahertz', 'terahertz', 'petahertz',
+      'megahertz', 'gigahertz', 'terahertz', 'petahertz'
     ];
 
   var i = parseInt(Math.floor(Math.log(megahertz) / Math.log(1000)));
