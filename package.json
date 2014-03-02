@@ -1,5 +1,5 @@
 {
-  "name": "wheatley-generators",
+  "name": "wheatley-formatters",
   "description": "A collection of useful text formatters for Wheatley",
   "version": "0.1.0",
   "main": "./format.js",
