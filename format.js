@@ -19,6 +19,9 @@ exports.bytes = function (bytes, abbr) {
     ];
 
   var i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
+
+  if (i > sizes.length - 1) i = sizes.length - 1; // Larger than yottabytes? yikes.
+
   return util.format('%s %s', (bytes / Math.pow(1024, i)).toFixed(2), sizes[i]);
 };
 
@@ -36,5 +39,8 @@ exports.frequency = function (megahertz, abbr) {
     ];
 
   var i = parseInt(Math.floor(Math.log(megahertz) / Math.log(1000)));
+
+  if (i > frequencies.length - 1) i = frequencies.length - 1;
+
   return util.format('%s %s', (megahertz / Math.pow(1000, i)).toFixed(2), frequencies[i]);
 };

@@ -5,8 +5,19 @@ var assert = require('assert'),
 
 describe('format', function () {
 
+  // larger than yottabyte
+  describe('#bytes(10000000000000000000000000000)', function () {
+
+    it('should return 8271.81 YB', function () {
+      var s = format.bytes(10000000000000000000000000000);
+      var a = '8271.81 YB';
+      assert.equal(s, a);
+    });
+
+  });
+
   // terabytes
-  describe('#byte(2199023255552)', function () {
+  describe('#bytes(2199023255552)', function () {
 
     it('should return 2.00 TB', function () {
       var s = format.bytes(2199023255552);
@@ -22,7 +33,7 @@ describe('format', function () {
 
   });
   // gigabytes
-  describe('#byte(8589934592)', function () {
+  describe('#bytes(8589934592)', function () {
 
     it('should return 8.00 GB', function () {
       var s = format.bytes(8589934592);
@@ -39,7 +50,7 @@ describe('format', function () {
   });
 
   // megabytes
-  describe('#byte(536870912)', function () {
+  describe('#bytes(536870912)', function () {
 
     it('should return 512.00 MB', function () {
       var s = format.bytes(536870912);
@@ -57,7 +68,7 @@ describe('format', function () {
 
 
   // kilobytes
-  describe('#byte(4096)', function () {
+  describe('#bytes(4096)', function () {
 
     it('should return 4.00 kB', function () {
       var s = format.bytes(4096);
@@ -74,7 +85,7 @@ describe('format', function () {
   });
 
   // bytes
-  describe('#byte(4)', function () {
+  describe('#bytes(4)', function () {
 
     it('should return 4.00 bytes', function () {
       var s = format.bytes(4);

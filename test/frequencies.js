@@ -5,6 +5,23 @@ var assert = require('assert'),
 
 describe('format', function () {
 
+  // larger than terahertz
+  describe('#frequency(3000000000000)', function () {
+
+    it('should return 3000.00 PHz', function () {
+      var s = format.frequency(3000000000000);
+      var a = '3000.00 PHz';
+      assert.equal(s, a);
+    });
+
+    it('should return 3.00 terahertz', function () {
+      var s = format.frequency(3000000, false);
+      var a = '3.00 terahertz';
+      assert.equal(s, a);
+    });
+
+  });
+
   // terahertz
   describe('#frequency(3000000)', function () {
 
