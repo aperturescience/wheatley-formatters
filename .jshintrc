@@ -20,5 +20,7 @@
   "smarttabs": false,
   "white": true,
   "globals": {
+    "describe": false,
+    "it": false
   }
 }

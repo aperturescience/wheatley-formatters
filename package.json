@@ -9,5 +9,11 @@
       "email": "gilles@demey.io",
       "web": "http://gilles.demey.io"
     }
-  ]
+  ],
+  "devDependencies": {
+    "mocha": "^1.17.1"
+  },
+  "scripts": {
+    "test": "mocha"
+  }
 }
